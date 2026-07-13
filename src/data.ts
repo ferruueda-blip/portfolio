@@ -26,6 +26,7 @@ export interface ExperienceItem {
   period: TranslatedString;
   description: TranslatedString;
   achievements?: TranslatedArray;
+  keyImpact: TranslatedString;
   tags?: string[];
 }
 
@@ -116,7 +117,7 @@ export const EXPERIENCE_TIMELINE: ExperienceItem[] = [
     },
     description: {
       es: "Lidero la gestión de producto y la optimización de flujos operativos B2B, coordinando equipos de ingeniería para entregar soluciones de software estables que eliminan la fricción operativa y automatizan procesos clave.",
-      en: "I lead product management and B2B operational workflow optimization, coordinating engineering teams to deliver stable software solutions that eliminate operational friction and automate key processes.",
+      en: "Lead product management and B2B operational workflow optimization, coordinating engineering teams to deliver stable software solutions that eliminate operational friction and automate key processes.",
     },
     achievements: {
       es: [
@@ -126,11 +127,15 @@ export const EXPERIENCE_TIMELINE: ExperienceItem[] = [
         "Escalé la capacidad operativa creando desde cero una red de +50 Partner Builders activos.",
       ],
       en: [
-        "I led the implementation of +25 generative AI projects for +16 B2B clients, integrating APIs and agents.",
-        "I achieved conversion rates of up to 80% in digital channels through self-service transactional flows.",
-        "I reduced deployment Time-to-Value by ~30% (from 60 to 40 average days) by restructuring the team into agile cells.",
-        "I scaled operational capacity by creating an active network of +50 Partner Builders from scratch.",
+        "Led the implementation of 25+ generative AI projects for 16+ B2B clients, integrating advanced LLM APIs and conversational agents.",
+        "Achieved digital channel conversion rates of up to 80% by designing and executing self-service transactional flows.",
+        "Reduced deployment Time-to-Value (TTV) by ~30% (from an average of 60 to 40 days) by restructuring engineering teams into high-performing agile cells.",
+        "Scaled operational capacity by building an active network of 50+ Partner Builders from the ground up.",
       ],
+    },
+    keyImpact: {
+      es: "Reducción del 30% en el Time-to-Value de despliegue (de 60 a 40 días promedio) reestructurando equipos de ingeniería en células ágiles de alto rendimiento.",
+      en: "30% reduction in deployment Time-to-Value (from 60 to 40 average days) by restructuring engineering teams into high-performance agile cells."
     },
     tags: ["Operations", "Product Owner", "Agile", "Process Optimization", "SaaS"],
   },
@@ -147,7 +152,7 @@ export const EXPERIENCE_TIMELINE: ExperienceItem[] = [
     },
     description: {
       es: "Gestioné plataformas SaaS multi-cliente, lideré la traducción funcional entre negocio y tecnología, y coordiné el delivery técnico del equipo de desarrollo.",
-      en: "I managed multi-tenant SaaS platforms, led functional translation between business and technology, and coordinated technical delivery for the development team.",
+      en: "Managed multi-tenant SaaS platforms, leading functional translation between business and technology, and coordinating technical delivery for the development team.",
     },
     achievements: {
       es: [
@@ -156,10 +161,14 @@ export const EXPERIENCE_TIMELINE: ExperienceItem[] = [
         "Mapeé procesos (BPMN) para garantizar la traducción técnica entre negocio e ingeniería.",
       ],
       en: [
-        "I directed the B2B SaaS development cycle, achieving functional MVPs in 6 months using agile methodologies.",
-        "I led a 5-person technical team with 3-week sprints, iterating core features with zero schedule deviation.",
-        "I mapped processes (BPMN) to ensure accurate technical translation between business and engineering.",
+        "Directed the end-to-end B2B SaaS development lifecycle, delivering functional MVPs within 6 months using Scrum and agile methodologies.",
+        "Managed a cross-functional technical team of 5, facilitating 3-week sprints and iterating core product features with zero timeline deviation.",
+        "Mapped operational processes using BPMN standards to ensure precise technical translation between business and engineering teams.",
       ],
+    },
+    keyImpact: {
+      es: "Lanzamiento exitoso del MVP de la plataforma SaaS B2B en un plazo récord de 6 meses bajo metodologías ágiles y control de desviaciones técnicas.",
+      en: "Successful launch of the B2B SaaS platform MVP in a record time of 6 months using agile methodologies and technical variance controls."
     },
     tags: ["SaaS", "BPMN", "Project Management", "Jira", "Process Mapping"],
   },
@@ -175,8 +184,8 @@ export const EXPERIENCE_TIMELINE: ExperienceItem[] = [
       en: "November 2020 - September 2021",
     },
     description: {
-       es: "Lideré iniciativas de mejora continua, estandarización de procesos bajo la filosofía Lean y la digitalización de operativas físicas tradicionales.",
-       en: "I led continuous improvement initiatives, process standardization under Lean philosophy, and digitalization of traditional physical operations.",
+      es: "Lideré iniciativas de mejora continua, estandarización de procesos bajo la filosofía Lean y la digitalización de operativas físicas tradicionales.",
+      en: "Led continuous improvement initiatives, process standardization under Lean philosophy, and digitalization of traditional physical operations.",
     },
     achievements: {
       es: [
@@ -184,9 +193,13 @@ export const EXPERIENCE_TIMELINE: ExperienceItem[] = [
         "Identifiqué cuellos de botella digitalizando procedimientos operativos bajo la filosofía Lean.",
       ],
       en: [
-        "I aligned production capacity with commercial demand, supporting sustained monthly sales of ~$30,000.",
-        "I identified bottlenecks by digitalizing operational procedures under a Lean philosophy.",
+        "Aligned production capacity with commercial demand, supporting sustained monthly sales of ~$30,000.",
+        "Identified and resolved operational bottlenecks by digitalizing procedural workflows under a Lean philosophy.",
       ],
+    },
+    keyImpact: {
+      es: "Estandarización y digitalización de flujos bajo metodología Lean, garantizando la continuidad operativa y soportando ventas mensuales estables de ~$30,000.",
+      en: "Process standardization and flow digitalization under Lean methodology, guaranteeing operational continuity and supporting stable monthly sales of ~$30,000."
     },
     tags: ["Lean", "Continuous Improvement", "Standardization", "Operations"],
   },

@@ -99,14 +99,14 @@ const labels = {
     experienceTitle: "Experiencia Profesional",
     skillsTitle: "Habilidades y Tecnologías",
     educationTitle: "Educación",
-    profileText: "Ingeniero Industrial con más de 6 años de experiencia liderando la gestión de productos y optimizando flujos de operaciones B2B. Especializado en el liderazgo de equipos de ingeniería, priorización táctica de backlog e integración de agentes conversacionales y tecnologías de IA generativa para eliminar fricción y acelerar procesos de negocio.",
+    profileText: "Ingeniero Industrial con más de 6 años de experiencia liderando la gestión de productos y optimizando flujos operativos B2B. Especializado en el liderazgo de equipos de desarrollo, priorización táctica del backlog e integración de agentes conversacionales e IA generativa para eliminar la fricción operativa y acelerar procesos de negocio.",
   },
   en: {
     profileTitle: "Professional Profile",
     experienceTitle: "Professional Experience",
     skillsTitle: "Skills & Technologies",
     educationTitle: "Education",
-    profileText: "Industrial Engineer with over 6 years of experience leading product management and optimizing B2B operational workflows. Specialized in leading engineering teams, tactical backlog prioritization, and integrating conversational agents and generative AI technologies to eliminate friction and accelerate business processes.",
+    profileText: "Results-driven Industrial Engineer with over 6 years of experience driving product management and optimizing B2B operational workflows. Expert in leading cross-functional engineering teams, tactical backlog prioritization, and integrating advanced conversational agents and generative AI technologies to eliminate operational friction and accelerate business value.",
   }
 };
 

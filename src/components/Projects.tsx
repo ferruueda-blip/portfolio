@@ -114,503 +114,251 @@ export default function Projects() {
           id="projects-carousel"
         >
           
-          {/* Card 1: Cervecería Nacional (AI Transformation) */}
-          <div className="w-[88vw] sm:w-[400px] md:w-[360px] shrink-0 snap-start">
+          {/* Card 1: Dirección de Producto SaaS (Dishio) */}
+          <div className="w-[88vw] sm:w-[400px] md:w-[380px] shrink-0 snap-start p-1">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="glass-card rounded-lg flex flex-col h-full overflow-hidden hover:bg-white/[0.05] hover:border-white/15 transition-all duration-300 group"
+              className="relative p-[1px] bg-white/10 hover:bg-blue-500/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300 [clip-path:polygon(16px_0px,100%_0px,100%_calc(100%-16px),calc(100%-16px)_100%,0px_100%,0px_16px)] group h-full"
             >
-              {/* Elegant Tech Placeholder: Architecture Diagram */}
-              <div aria-hidden="true" className="h-48 bg-[#090909] border-b border-white/5 relative flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 opacity-20 pointer-events-none"
-                     style={{ 
-                       backgroundImage: "radial-gradient(#3B82F6 1px, transparent 1px)", 
-                       backgroundSize: "12px 12px" 
-                     }} 
-                />
-                <div className="relative flex items-center justify-center gap-5 z-10 scale-95">
-                  <div className="w-12 h-12 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center shadow-inner relative">
-                    <Bot className="w-5 h-5 text-blue-400" />
-                    <span className="absolute -bottom-5 text-[8px] font-mono text-slate-500">AI AGENT</span>
+              <div className="bg-[#080808] [clip-path:polygon(16px_0px,100%_0px,100%_calc(100%-16px),calc(100%-16px)_100%,0px_100%,0px_16px)] h-full flex flex-col overflow-hidden">
+                {/* Elegant Tech Placeholder: SaaS Interface mockup */}
+                <div aria-hidden="true" className="h-44 bg-[#090909] border-b border-white/5 relative flex items-center justify-center overflow-hidden">
+                  <div className="absolute inset-0 opacity-20 pointer-events-none"
+                       style={{ 
+                         backgroundImage: "radial-gradient(#3B82F6 1px, transparent 1px)", 
+                         backgroundSize: "12px 12px" 
+                       }} 
+                  />
+                  <div className="w-[180px] bg-[#0c0c0c] border border-white/10 rounded-sm p-3 relative z-10 shadow-lg flex flex-col h-[100px] scale-95">
+                    <div className="flex items-center gap-1 mb-2 border-b border-white/5 pb-1">
+                      <Layout className="w-2.5 h-2.5 text-blue-400" />
+                      <span className="text-[8px] font-mono text-slate-400 uppercase tracking-wider">DISHIO SaaS MVP</span>
+                    </div>
+                    <div className="flex flex-row gap-2 flex-grow">
+                      <div className="w-[45px] bg-white/5 rounded-sm p-1 flex flex-col gap-1">
+                        <div className="h-1 bg-white/10 rounded-full w-full" />
+                        <div className="h-1 bg-white/10 rounded-full w-4/5" />
+                        <div className="h-1 bg-white/10 rounded-full w-2/3" />
+                      </div>
+                      <div className="flex-1 bg-blue-500/5 border border-blue-500/10 rounded-sm p-1.5 flex flex-col justify-between">
+                        <div className="flex items-center gap-1">
+                          <Rocket className="w-2 h-2 text-blue-400 animate-pulse" />
+                          <span className="text-[8px] font-mono text-blue-300">ACTIVE</span>
+                        </div>
+                        <div className="h-2 bg-blue-600/30 rounded-sm w-full" />
+                      </div>
+                    </div>
                   </div>
-                  <div className="relative w-8 h-[2px] bg-blue-500/30 flex items-center justify-between">
-                    <div className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping" />
-                    <GitBranch className="w-3 h-3 text-blue-400/50 absolute left-1/2 -translate-x-1/2 -top-1.5" />
-                  </div>
-                  <div className="w-12 h-12 rounded-sm bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shadow-inner relative">
-                    <Cpu className="w-5 h-5 text-blue-300" />
-                    <span className="absolute -bottom-5 text-[8px] font-mono text-slate-500">ORCHESTRATOR</span>
-                  </div>
-                  <div className="relative w-8 h-[2px] bg-blue-500/30">
-                    <div className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping delay-300 absolute right-0" />
-                  </div>
-                  <div className="w-12 h-12 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center shadow-inner relative">
-                    <Database className="w-5 h-5 text-blue-400" />
-                    <span className="absolute -bottom-5 text-[8px] font-mono text-slate-500">DATABASE</span>
+                  <div className="absolute bottom-2 right-2 flex items-center gap-1 bg-white/5 px-2 py-0.5 rounded-sm border border-white/10">
+                    <span className="font-mono text-[8px] text-slate-400 uppercase tracking-widest">[MVP ROADMAP]</span>
                   </div>
                 </div>
-                <div className="absolute bottom-2 right-2 flex items-center gap-1 bg-white/5 px-2 py-0.5 rounded-sm border border-white/10">
-                  <span className="font-mono text-[8px] text-slate-400 uppercase tracking-widest">{t("projects_p1_placeholder")}</span>
-                </div>
-              </div>
 
-              {/* Content info */}
-              <div className="p-6 flex flex-col flex-grow">
-                <h4 className="text-lg font-display font-bold text-white uppercase tracking-tight mb-3">
-                  {t("projects_p1_title")}
-                </h4>
-                
-                {/* Project Metadata Badges */}
-                <div className="flex flex-wrap gap-1.5 mb-4">
-                  <span className="text-[9px] font-mono font-bold tracking-wider uppercase px-2 py-0.5 bg-blue-500/15 border border-blue-500/30 text-blue-300 rounded-sm">
-                    {t("projects_p1_employer")}
-                  </span>
-                  <span className="text-[9px] font-mono font-bold tracking-wider uppercase px-2 py-0.5 bg-white/5 border border-white/10 text-slate-300 rounded-sm">
-                    {t("projects_p1_role")}
-                  </span>
-                </div>
-                
+                {/* Content info */}
+                <div className="p-6 flex flex-col flex-grow">
+                  <h4 className="text-base sm:text-lg font-display font-bold text-white uppercase tracking-tight mb-3">
+                    {t("projects_p1_title")}
+                  </h4>
+                  
+                  {/* Project Metadata Badges */}
+                  <div className="flex flex-wrap gap-1.5 mb-5">
+                    <span className="text-[9px] font-mono font-bold tracking-wider uppercase px-2 py-0.5 bg-blue-500/15 border border-blue-500/30 text-blue-300 rounded-sm">
+                      {t("projects_employer_label")}: {t("projects_p1_employer")}
+                    </span>
+                    <span className="text-[9px] font-mono font-bold tracking-wider uppercase px-2 py-0.5 bg-white/5 border border-white/10 text-slate-300 rounded-sm">
+                      {t("projects_role_label")}: {t("projects_p1_role")}
+                    </span>
+                  </div>
 
-
-                <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6 flex-grow font-sans">
-                  {t("projects_p1_desc")}
-                </p>
-                
-                {/* Impact box */}
-                <div className="mt-auto pt-4 border-t border-white/5 bg-blue-500/[0.02] p-3.5 rounded-sm border border-blue-500/5">
-                  <span className="text-[9px] font-mono tracking-wider text-blue-400 uppercase block mb-1">
-                    {t("projects_impact_label")}
-                  </span>
-                  <p className="text-slate-300 text-xs font-sans leading-relaxed">
-                    {t("projects_p1_impact")}
-                  </p>
+                  {/* Pain Point */}
+                  <div className="mb-5">
+                    <span className="text-[10px] font-mono font-bold tracking-wider text-red-400 uppercase block mb-1">
+                      &gt;_ {t("projects_pain_label")}
+                    </span>
+                    <p className="text-gray-300 text-xs sm:text-sm leading-relaxed font-sans">
+                      {t("projects_p1_desc")}
+                    </p>
+                  </div>
+                  
+                  {/* Result/Outcome box */}
+                  <div className="mt-auto pt-4 border-t border-white/5 bg-blue-500/[0.02] p-3.5 rounded-sm border border-blue-500/5">
+                    <span className="text-[10px] font-mono font-bold tracking-wider text-blue-400 uppercase block mb-1">
+                      &gt;_ {t("projects_result_label")}
+                    </span>
+                    <p className="text-slate-200 text-xs sm:text-sm font-sans leading-relaxed">
+                      {t("projects_p1_impact")}
+                    </p>
+                  </div>
                 </div>
               </div>
             </motion.div>
           </div>
 
-          {/* Card 2: HubSpot + ClickUp */}
-          <div className="w-[88vw] sm:w-[400px] md:w-[360px] shrink-0 snap-start">
+          {/* Card 2: Transformación e IA a Gran Escala (Cervecería Nacional / Vertical Bancaria) */}
+          <div className="w-[88vw] sm:w-[400px] md:w-[380px] shrink-0 snap-start p-1">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="glass-card rounded-lg flex flex-col h-full overflow-hidden hover:bg-white/[0.05] hover:border-white/15 transition-all duration-300 group"
+              className="relative p-[1px] bg-white/10 hover:bg-blue-500/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300 [clip-path:polygon(16px_0px,100%_0px,100%_calc(100%-16px),calc(100%-16px)_100%,0px_100%,0px_16px)] group h-full"
             >
-              {/* Elegant Tech Placeholder: Dashboard Capture */}
-              <div aria-hidden="true" className="h-48 bg-[#090909] border-b border-white/5 relative flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 opacity-20 pointer-events-none"
-                     style={{ 
-                       backgroundImage: "radial-gradient(#3B82F6 1px, transparent 1px)", 
-                       backgroundSize: "12px 12px" 
-                     }} 
-                />
-                <div className="w-[180px] bg-white/[0.02] border border-white/10 rounded-sm p-3 relative z-10 shadow-lg scale-95">
-                  <div className="flex items-center justify-between border-b border-white/5 pb-1.5 mb-2">
-                    <div className="flex gap-1">
-                      <div className="w-1.5 h-1.5 rounded-full bg-red-500/60" />
-                      <div className="w-1.5 h-1.5 rounded-full bg-yellow-500/60" />
-                      <div className="w-1.5 h-1.5 rounded-full bg-green-500/60" />
+              <div className="bg-[#080808] [clip-path:polygon(16px_0px,100%_0px,100%_calc(100%-16px),calc(100%-16px)_100%,0px_100%,0px_16px)] h-full flex flex-col overflow-hidden">
+                {/* Elegant Tech Placeholder: AI Node Graph / Chatbot mockup */}
+                <div aria-hidden="true" className="h-44 bg-[#090909] border-b border-white/5 relative flex items-center justify-center overflow-hidden">
+                  <div className="absolute inset-0 opacity-20 pointer-events-none"
+                       style={{ 
+                         backgroundImage: "radial-gradient(#10B981 1px, transparent 1px)", 
+                         backgroundSize: "12px 12px" 
+                       }} 
+                  />
+                  <div className="relative flex items-center justify-center gap-4 z-10 scale-95">
+                    <div className="w-12 h-12 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center shadow-inner relative">
+                      <Bot className="w-5 h-5 text-emerald-400 animate-pulse" />
+                      <span className="absolute -bottom-5 text-[8px] font-mono text-slate-500">AI CLIENT</span>
                     </div>
-                    <span className="text-[8px] font-mono text-slate-500">OPERATIONS DB</span>
+                    <div className="relative w-8 h-[2px] bg-emerald-500/30 flex items-center justify-between">
+                      <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-ping" />
+                      <GitBranch className="w-3 h-3 text-emerald-400/50 absolute left-1/2 -translate-x-1/2 -top-1.5" />
+                    </div>
+                    <div className="w-12 h-12 rounded-sm bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shadow-inner relative">
+                      <Cpu className="w-5 h-5 text-emerald-300" />
+                      <span className="absolute -bottom-5 text-[8px] font-mono text-slate-500">ORCHESTRATOR</span>
+                    </div>
+                    <div className="relative w-8 h-[2px] bg-emerald-500/30">
+                      <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-ping delay-300 absolute right-0" />
+                    </div>
+                    <div className="w-12 h-12 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center shadow-inner relative">
+                      <Database className="w-5 h-5 text-emerald-400" />
+                      <span className="absolute -bottom-5 text-[8px] font-mono text-slate-500">LEGACY_API</span>
+                    </div>
                   </div>
-                  <div className="space-y-1.5">
-                    <div className="h-2 bg-blue-500/20 rounded-sm relative overflow-hidden flex items-center">
-                      <div className="h-full bg-blue-500 w-4/5" />
-                      <span className="absolute right-1 text-[8px] font-mono text-slate-300 font-bold">80%</span>
-                    </div>
-                    <div className="h-2 bg-blue-500/20 rounded-sm relative overflow-hidden flex items-center">
-                      <div className="h-full bg-blue-600 w-3/5" />
-                      <span className="absolute right-1 text-[8px] font-mono text-slate-300 font-bold">60%</span>
-                    </div>
-                    <div className="h-2 bg-blue-500/20 rounded-sm relative overflow-hidden flex items-center">
-                      <div className="h-full bg-blue-400 w-[90%]" />
-                      <span className="absolute right-1 text-[8px] font-mono text-slate-300 font-bold">90%</span>
-                    </div>
+                  <div className="absolute bottom-2 right-2 flex items-center gap-1 bg-white/5 px-2 py-0.5 rounded-sm border border-white/10">
+                    <span className="font-mono text-[8px] text-slate-400 uppercase tracking-widest">[CONVERSATIONAL IA]</span>
                   </div>
                 </div>
-                <div className="absolute bottom-2 right-2 flex items-center gap-1 bg-white/5 px-2 py-0.5 rounded-sm border border-white/10">
-                  <span className="font-mono text-[8px] text-slate-400 uppercase tracking-widest">{t("projects_p2_placeholder")}</span>
-                </div>
-              </div>
 
-              {/* Content info */}
-              <div className="p-6 flex flex-col flex-grow">
-                <h4 className="text-lg font-display font-bold text-white uppercase tracking-tight mb-3">
-                  {t("projects_p2_title")}
-                </h4>
-                
-                {/* Project Metadata Badges */}
-                <div className="flex flex-wrap gap-1.5 mb-4">
-                  <span className="text-[9px] font-mono font-bold tracking-wider uppercase px-2 py-0.5 bg-blue-500/15 border border-blue-500/30 text-blue-300 rounded-sm">
-                    {t("projects_p2_employer")}
-                  </span>
-                  <span className="text-[9px] font-mono font-bold tracking-wider uppercase px-2 py-0.5 bg-white/5 border border-white/10 text-slate-300 rounded-sm">
-                    {t("projects_p2_role")}
-                  </span>
-                </div>
-                
+                {/* Content info */}
+                <div className="p-6 flex flex-col flex-grow">
+                  <h4 className="text-base sm:text-lg font-display font-bold text-white uppercase tracking-tight mb-3">
+                    {t("projects_p2_title")}
+                  </h4>
+                  
+                  {/* Project Metadata Badges */}
+                  <div className="flex flex-wrap gap-1.5 mb-5">
+                    <span className="text-[9px] font-mono font-bold tracking-wider uppercase px-2 py-0.5 bg-blue-500/15 border border-blue-500/30 text-blue-300 rounded-sm">
+                      {t("projects_employer_label")}: {t("projects_p2_employer")}
+                    </span>
+                    <span className="text-[9px] font-mono font-bold tracking-wider uppercase px-2 py-0.5 bg-white/5 border border-white/10 text-slate-300 rounded-sm">
+                      {t("projects_role_label")}: {t("projects_p2_role")}
+                    </span>
+                  </div>
 
-
-                <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6 flex-grow font-sans">
-                  {t("projects_p2_desc")}
-                </p>
-                
-                {/* Impact box */}
-                <div className="mt-auto pt-4 border-t border-white/5 bg-blue-500/[0.02] p-3.5 rounded-sm border border-blue-500/5">
-                  <span className="text-[9px] font-mono tracking-wider text-blue-400 uppercase block mb-1">
-                    {t("projects_impact_label")}
-                  </span>
-                  <p className="text-slate-300 text-xs font-sans leading-relaxed">
-                    {t("projects_p2_impact")}
-                  </p>
+                  {/* Pain Point */}
+                  <div className="mb-5">
+                    <span className="text-[10px] font-mono font-bold tracking-wider text-red-400 uppercase block mb-1">
+                      &gt;_ {t("projects_pain_label")}
+                    </span>
+                    <p className="text-gray-300 text-xs sm:text-sm leading-relaxed font-sans">
+                      {t("projects_p2_desc")}
+                    </p>
+                  </div>
+                  
+                  {/* Result/Outcome box */}
+                  <div className="mt-auto pt-4 border-t border-white/5 bg-blue-500/[0.02] p-3.5 rounded-sm border border-blue-500/5">
+                    <span className="text-[10px] font-mono font-bold tracking-wider text-blue-400 uppercase block mb-1">
+                      &gt;_ {t("projects_result_label")}
+                    </span>
+                    <p className="text-slate-200 text-xs sm:text-sm font-sans leading-relaxed">
+                      {t("projects_p2_impact")}
+                    </p>
+                  </div>
                 </div>
               </div>
             </motion.div>
           </div>
 
-          {/* Card 3: SaaS B2B */}
-          <div className="w-[88vw] sm:w-[400px] md:w-[360px] shrink-0 snap-start">
+          {/* Card 3: Eficiencia de Operaciones B2B (Dashboard Hubspot + ClickUp) */}
+          <div className="w-[88vw] sm:w-[400px] md:w-[380px] shrink-0 snap-start p-1">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="glass-card rounded-lg flex flex-col h-full overflow-hidden hover:bg-white/[0.05] hover:border-white/15 transition-all duration-300 group"
+              className="relative p-[1px] bg-white/10 hover:bg-blue-500/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300 [clip-path:polygon(16px_0px,100%_0px,100%_calc(100%-16px),calc(100%-16px)_100%,0px_100%,0px_16px)] group h-full"
             >
-              {/* Elegant Tech Placeholder: SaaS Interface mockup */}
-              <div aria-hidden="true" className="h-48 bg-[#090909] border-b border-white/5 relative flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 opacity-20 pointer-events-none"
-                     style={{ 
-                       backgroundImage: "radial-gradient(#3B82F6 1px, transparent 1px)", 
-                       backgroundSize: "12px 12px" 
-                     }} 
-                />
-                <div className="w-[180px] bg-[#0c0c0c] border border-white/10 rounded-sm p-3 relative z-10 shadow-lg flex flex-col h-[100px] scale-95">
-                  <div className="flex items-center gap-1 mb-2 border-b border-white/5 pb-1">
-                    <Layout className="w-2.5 h-2.5 text-blue-400" />
-                    <span className="text-[8px] font-mono text-slate-400 uppercase tracking-wider">PLATFORM INTERFACE</span>
-                  </div>
-                  <div className="flex flex-row gap-2 flex-grow">
-                    <div className="w-[45px] bg-white/5 rounded-sm p-1 flex flex-col gap-1">
-                      <div className="h-1 bg-white/10 rounded-full w-full" />
-                      <div className="h-1 bg-white/10 rounded-full w-4/5" />
-                      <div className="h-1 bg-white/10 rounded-full w-2/3" />
-                    </div>
-                    <div className="flex-1 bg-blue-500/5 border border-blue-500/10 rounded-sm p-1.5 flex flex-col justify-between">
-                      <div className="flex items-center gap-1">
-                        <Rocket className="w-2 h-2 text-blue-400 animate-pulse" />
-                        <span className="text-[8px] font-mono text-blue-300">ACTIVE MVP</span>
+              <div className="bg-[#080808] [clip-path:polygon(16px_0px,100%_0px,100%_calc(100%-16px),calc(100%-16px)_100%,0px_100%,0px_16px)] h-full flex flex-col overflow-hidden">
+                {/* Elegant Tech Placeholder: Dashboard Capture mockup */}
+                <div aria-hidden="true" className="h-44 bg-[#090909] border-b border-white/5 relative flex items-center justify-center overflow-hidden">
+                  <div className="absolute inset-0 opacity-20 pointer-events-none"
+                       style={{ 
+                         backgroundImage: "radial-gradient(#3B82F6 1px, transparent 1px)", 
+                         backgroundSize: "12px 12px" 
+                       }} 
+                  />
+                  <div className="w-[180px] bg-white/[0.02] border border-white/10 rounded-sm p-3 relative z-10 shadow-lg scale-95">
+                    <div className="flex items-center justify-between border-b border-white/5 pb-1.5 mb-2">
+                      <div className="flex gap-1">
+                        <div className="w-1.5 h-1.5 rounded-full bg-blue-500/60" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-purple-500/60" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500/60" />
                       </div>
-                      <div className="h-2 bg-blue-600/30 rounded-sm w-full" />
+                      <span className="text-[8px] font-mono text-slate-500">OPS PIPELINE</span>
                     </div>
-                  </div>
-                </div>
-                <div className="absolute bottom-2 right-2 flex items-center gap-1 bg-white/5 px-2 py-0.5 rounded-sm border border-white/10">
-                  <span className="font-mono text-[8px] text-slate-400 uppercase tracking-widest">{t("projects_p3_placeholder")}</span>
-                </div>
-              </div>
-
-              {/* Content info */}
-              <div className="p-6 flex flex-col flex-grow">
-                <h4 className="text-lg font-display font-bold text-white uppercase tracking-tight mb-3">
-                  {t("projects_p3_title")}
-                </h4>
-                
-                {/* Project Metadata Badges */}
-                <div className="flex flex-wrap gap-1.5 mb-4">
-                  <span className="text-[9px] font-mono font-bold tracking-wider uppercase px-2 py-0.5 bg-blue-500/15 border border-blue-500/30 text-blue-300 rounded-sm">
-                    {t("projects_p3_employer")}
-                  </span>
-                  <span className="text-[9px] font-mono font-bold tracking-wider uppercase px-2 py-0.5 bg-white/5 border border-white/10 text-slate-300 rounded-sm">
-                    {t("projects_p3_role")}
-                  </span>
-                </div>
-                
-
-
-                <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6 flex-grow font-sans">
-                  {t("projects_p3_desc")}
-                </p>
-                
-                {/* Impact box */}
-                <div className="mt-auto pt-4 border-t border-white/5 bg-blue-500/[0.02] p-3.5 rounded-sm border border-blue-500/5">
-                  <span className="text-[9px] font-mono tracking-wider text-blue-400 uppercase block mb-1">
-                    {t("projects_impact_label")}
-                  </span>
-                  <p className="text-slate-300 text-xs font-sans leading-relaxed">
-                    {t("projects_p3_impact")}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Card 4: Simulador de Inversiones - Banco Internacional */}
-          <div className="w-[88vw] sm:w-[400px] md:w-[360px] shrink-0 snap-start">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="glass-card rounded-lg flex flex-col h-full overflow-hidden hover:bg-white/[0.05] hover:border-white/15 transition-all duration-300 group"
-            >
-              {/* WhatsApp Simulator Frame Mockup */}
-              <div aria-hidden="true" className="h-48 bg-[#090909] border-b border-white/5 relative flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 opacity-10 pointer-events-none"
-                     style={{ 
-                       backgroundImage: "radial-gradient(#10B981 1px, transparent 1px)", 
-                       backgroundSize: "12px 12px" 
-                     }} 
-                />
-                
-                {/* WhatsApp Chat Simulation UI */}
-                <div className="w-[200px] bg-[#0d0d0d] border border-emerald-500/20 rounded-md shadow-2xl relative z-10 flex flex-col h-[135px] scale-95 overflow-hidden">
-                  {/* Chat header */}
-                  <div className="bg-[#111c24] px-2.5 py-1.5 flex items-center justify-between border-b border-white/5">
-                    <div className="flex items-center gap-1.5">
-                      <div className="w-5 h-5 rounded-full bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center">
-                        <Smartphone className="w-2.5 h-2.5 text-emerald-400" />
+                    <div className="space-y-1.5">
+                      <div className="h-2 bg-blue-500/20 rounded-sm relative overflow-hidden flex items-center">
+                        <div className="h-full bg-blue-500 w-[95%]" />
+                        <span className="absolute right-1 text-[8px] font-mono text-slate-300 font-bold">95%</span>
                       </div>
-                      <div className="flex flex-col">
-                        <span className="text-[8px] font-sans font-bold text-white leading-none">Banco Internacional</span>
-                        <span className="text-[8px] font-mono text-emerald-400 font-bold leading-none tracking-widest mt-0.5">● CHATBOT</span>
+                      <div className="h-2 bg-blue-500/20 rounded-sm relative overflow-hidden flex items-center">
+                        <div className="h-full bg-purple-500 w-4/5" />
+                        <span className="absolute right-1 text-[8px] font-mono text-slate-300 font-bold">80%</span>
                       </div>
                     </div>
-                    <CheckCircle2 className="w-3 h-3 text-emerald-500 fill-emerald-500/10" />
                   </div>
+                  <div className="absolute bottom-2 right-2 flex items-center gap-1 bg-white/5 px-2 py-0.5 rounded-sm border border-white/10">
+                    <span className="font-mono text-[8px] text-slate-400 uppercase tracking-widest">[INTEGRATION END-TO-END]</span>
+                  </div>
+                </div>
+
+                {/* Content info */}
+                <div className="p-6 flex flex-col flex-grow">
+                  <h4 className="text-base sm:text-lg font-display font-bold text-white uppercase tracking-tight mb-3">
+                    {t("projects_p3_title")}
+                  </h4>
                   
-                  {/* Chat messages */}
-                  <div className="flex-1 p-2 space-y-1.5 overflow-y-auto hide-scrollbar flex flex-col justify-end">
-                    {/* User bubble */}
-                    <div className="bg-white/5 border border-white/5 text-slate-300 text-[8px] font-sans px-2 py-1 rounded-sm max-w-[80%] self-end">
-                      Simular inversión $10k a 360d
-                    </div>
-                    {/* Bank Bot bubble */}
-                    <div className="bg-[#0b141a] border border-emerald-500/25 text-emerald-400 text-[8px] font-mono px-2 py-1 rounded-sm max-w-[90%] self-start flex flex-col">
-                      <span className="font-bold text-[8px] text-slate-400 mb-0.5">INTER_BOT:</span>
-                      <span>Inversión simulada exitosamente al 8.75% EA. Retorno estimado: $875.00 USD. ¿Proceder?</span>
-                    </div>
+                  {/* Project Metadata Badges */}
+                  <div className="flex flex-wrap gap-1.5 mb-5">
+                    <span className="text-[9px] font-mono font-bold tracking-wider uppercase px-2 py-0.5 bg-blue-500/15 border border-blue-500/30 text-blue-300 rounded-sm">
+                      {t("projects_employer_label")}: {t("projects_p3_employer")}
+                    </span>
+                    <span className="text-[9px] font-mono font-bold tracking-wider uppercase px-2 py-0.5 bg-white/5 border border-white/10 text-slate-300 rounded-sm">
+                      {t("projects_role_label")}: {t("projects_p3_role")}
+                    </span>
                   </div>
-                </div>
 
-                <div className="absolute bottom-2 right-2 flex items-center gap-1 bg-white/5 px-2 py-0.5 rounded-sm border border-white/10">
-                  <span className="font-mono text-[8px] text-slate-400 uppercase tracking-widest">{t("projects_p4_placeholder")}</span>
-                </div>
-              </div>
-
-              {/* Content info */}
-              <div className="p-6 flex flex-col flex-grow">
-                <h4 className="text-lg font-display font-bold text-white uppercase tracking-tight mb-3">
-                  {t("projects_p4_title")}
-                </h4>
-                
-                {/* Project Metadata Badges */}
-                <div className="flex flex-wrap gap-1.5 mb-4">
-                  <span className="text-[9px] font-mono font-bold tracking-wider uppercase px-2 py-0.5 bg-blue-500/15 border border-blue-500/30 text-blue-300 rounded-sm">
-                    {t("projects_p4_employer")}
-                  </span>
-                  <span className="text-[9px] font-mono font-bold tracking-wider uppercase px-2 py-0.5 bg-white/5 border border-white/10 text-slate-300 rounded-sm">
-                    {t("projects_p4_role")}
-                  </span>
-                </div>
-                
-
-
-                <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6 flex-grow font-sans">
-                  {t("projects_p4_desc")}
-                </p>
-                
-                {/* Impact box */}
-                <div className="mt-auto pt-4 border-t border-white/5 bg-emerald-500/[0.02] p-3.5 rounded-sm border border-emerald-500/5">
-                  <span className="text-[9px] font-mono tracking-wider text-emerald-400 uppercase block mb-1">
-                    {t("projects_impact_label")}
-                  </span>
-                  <p className="text-slate-300 text-xs font-sans leading-relaxed">
-                    {t("projects_p4_impact")}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Card 5: Red Social Onírica */}
-          <div className="w-[88vw] sm:w-[400px] md:w-[360px] shrink-0 snap-start">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="glass-card rounded-lg flex flex-col h-full overflow-hidden hover:bg-white/[0.05] hover:border-white/15 transition-all duration-300 group"
-            >
-              {/* Dreaming Theme App Mockup */}
-              <div aria-hidden="true" className="h-48 bg-[#090909] border-b border-white/5 relative flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 opacity-10 pointer-events-none"
-                     style={{ 
-                       backgroundImage: "radial-gradient(#A78BFA 1px, transparent 1px)", 
-                       backgroundSize: "12px 12px" 
-                     }} 
-                />
-                
-                {/* Mobile UI Preview */}
-                <div className="w-[150px] bg-[#0b0c10] border border-white/10 rounded-md p-2.5 relative z-10 shadow-2xl flex flex-col h-[130px] scale-95">
-                  <div className="flex items-center justify-between mb-2 border-b border-white/5 pb-1">
-                    <div className="flex items-center gap-1">
-                      <Moon className="w-2.5 h-2.5 text-purple-400 animate-pulse" />
-                      <span className="text-[8px] font-display font-black text-white tracking-widest">ONIRICA</span>
-                    </div>
-                    <span className="text-[8px] font-mono text-slate-500">LIVE FEED</span>
-                  </div>
-                  
-                  {/* Journal card */}
-                  <div className="bg-purple-500/5 border border-purple-500/15 rounded p-1.5 mb-1.5">
-                    <span className="text-[8px] font-mono text-purple-400 uppercase tracking-widest block mb-0.5">@dreamer_77</span>
-                    <p className="text-slate-300 text-[8px] font-sans leading-normal">
-                      &quot;Soñé que volaba sobre el mar, el cielo era violeta y las estrellas se convertían en música...&quot;
+                  {/* Pain Point */}
+                  <div className="mb-5">
+                    <span className="text-[10px] font-mono font-bold tracking-wider text-red-400 uppercase block mb-1">
+                      &gt;_ {t("projects_pain_label")}
+                    </span>
+                    <p className="text-gray-300 text-xs sm:text-sm leading-relaxed font-sans">
+                      {t("projects_p3_desc")}
                     </p>
                   </div>
-
-                  {/* Admin moderation control mockup */}
-                  <div className="mt-auto bg-white/5 border border-white/5 rounded px-1.5 py-1 flex items-center justify-between">
-                    <span className="text-[8px] font-mono text-slate-400">ADMIN CONTROL</span>
-                    <span className="bg-purple-500 text-white text-[8px] font-mono font-bold px-1 rounded uppercase tracking-wider">APROBADO</span>
+                  
+                  {/* Result/Outcome box */}
+                  <div className="mt-auto pt-4 border-t border-white/5 bg-blue-500/[0.02] p-3.5 rounded-sm border border-blue-500/5">
+                    <span className="text-[10px] font-mono font-bold tracking-wider text-blue-400 uppercase block mb-1">
+                      &gt;_ {t("projects_result_label")}
+                    </span>
+                    <p className="text-slate-200 text-xs sm:text-sm font-sans leading-relaxed">
+                      {t("projects_p3_impact")}
+                    </p>
                   </div>
-                </div>
-
-                <div className="absolute bottom-2 right-2 flex items-center gap-1 bg-white/5 px-2 py-0.5 rounded-sm border border-white/10">
-                  <span className="font-mono text-[8px] text-slate-400 uppercase tracking-widest">{t("projects_p5_placeholder")}</span>
-                </div>
-              </div>
-
-              {/* Content info */}
-              <div className="p-6 flex flex-col flex-grow">
-                <h4 className="text-lg font-display font-bold text-white uppercase tracking-tight mb-3">
-                  {t("projects_p5_title")}
-                </h4>
-                
-                {/* Project Metadata Badges */}
-                <div className="flex flex-wrap gap-1.5 mb-4">
-                  <span className="text-[9px] font-mono font-bold tracking-wider uppercase px-2 py-0.5 bg-blue-500/15 border border-blue-500/30 text-blue-300 rounded-sm">
-                    {t("projects_p5_employer")}
-                  </span>
-                  <span className="text-[9px] font-mono font-bold tracking-wider uppercase px-2 py-0.5 bg-white/5 border border-white/10 text-slate-300 rounded-sm">
-                    {t("projects_p5_role")}
-                  </span>
-                </div>
-                
-
-
-                <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6 flex-grow font-sans">
-                  {t("projects_p5_desc")}
-                </p>
-                
-                {/* Impact box */}
-                <div className="mt-auto pt-4 border-t border-white/5 bg-purple-500/[0.02] p-3.5 rounded-sm border border-purple-500/5">
-                  <span className="text-[9px] font-mono tracking-wider text-purple-400 uppercase block mb-1">
-                    {t("projects_impact_label")}
-                  </span>
-                  <p className="text-slate-300 text-xs font-sans leading-relaxed">
-                    {t("projects_p5_impact")}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Card 6: Red de Partner Builders - Jelou AI */}
-          <div className="w-[88vw] sm:w-[400px] md:w-[360px] shrink-0 snap-start">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="glass-card rounded-lg flex flex-col h-full overflow-hidden hover:bg-white/[0.05] hover:border-white/15 transition-all duration-300 group"
-            >
-              {/* Network Node Graph Mockup */}
-              <div aria-hidden="true" className="h-48 bg-[#090909] border-b border-white/5 relative flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 opacity-15 pointer-events-none"
-                     style={{ 
-                       backgroundImage: "radial-gradient(#3B82F6 1px, transparent 1px)", 
-                       backgroundSize: "12px 12px" 
-                     }} 
-                />
-                
-                {/* Visualizing community map */}
-                <div className="relative w-full h-full flex items-center justify-center scale-90">
-                  {/* Central Node */}
-                  <div className="w-10 h-10 rounded-full bg-blue-500/20 border border-blue-400/50 flex items-center justify-center relative z-20 shadow-lg shadow-blue-500/20">
-                    <Users className="w-4 h-4 text-blue-400" />
-                    <span className="absolute -bottom-4 text-[8px] font-mono text-slate-400 font-bold tracking-widest whitespace-nowrap">CORE HUBS</span>
-                  </div>
-
-                  {/* Connecting branches to multiple satellite node partners */}
-                  <div className="absolute w-[180px] h-[100px] flex items-center justify-between pointer-events-none z-10">
-                    {/* Satellite 1 */}
-                    <div className="w-6 h-6 rounded bg-white/5 border border-white/10 flex items-center justify-center relative -translate-x-2 -translate-y-4">
-                      <span className="text-[8px] font-mono text-slate-400">PARTNER_1</span>
-                    </div>
-                    {/* Satellite 2 */}
-                    <div className="w-6 h-6 rounded bg-white/5 border border-white/10 flex items-center justify-center relative translate-x-2 -translate-y-8">
-                      <span className="text-[8px] font-mono text-slate-400 font-bold text-blue-300">AGENCY_X</span>
-                    </div>
-                    {/* Satellite 3 */}
-                    <div className="w-6 h-6 rounded bg-white/5 border border-white/10 flex items-center justify-center relative -translate-x-12 translate-y-6">
-                      <span className="text-[8px] font-mono text-slate-400">DEV_LAB</span>
-                    </div>
-                    {/* Satellite 4 */}
-                    <div className="w-6 h-6 rounded bg-white/5 border border-white/10 flex items-center justify-center relative translate-x-12 translate-y-4">
-                      <span className="text-[8px] font-mono text-slate-400 text-emerald-400 font-bold">50+ LIVE</span>
-                    </div>
-                  </div>
-
-                  {/* Ambient connection wires */}
-                  <svg className="absolute inset-0 w-full h-full text-slate-800 pointer-events-none opacity-40">
-                    <line x1="50%" y1="50%" x2="20%" y2="30%" stroke="currentColor" strokeWidth="1" strokeDasharray="3,3" />
-                    <line x1="50%" y1="50%" x2="80%" y2="20%" stroke="currentColor" strokeWidth="1" />
-                    <line x1="50%" y1="50%" x2="30%" y2="70%" stroke="currentColor" strokeWidth="1" />
-                    <line x1="50%" y1="50%" x2="75%" y2="65%" stroke="currentColor" strokeWidth="1" strokeDasharray="3,3" />
-                  </svg>
-                </div>
-
-                <div className="absolute bottom-2 right-2 flex items-center gap-1 bg-white/5 px-2 py-0.5 rounded-sm border border-white/10">
-                  <span className="font-mono text-[8px] text-slate-400 uppercase tracking-widest">{t("projects_p6_placeholder")}</span>
-                </div>
-              </div>
-
-              {/* Content info */}
-              <div className="p-6 flex flex-col flex-grow">
-                <h4 className="text-lg font-display font-bold text-white uppercase tracking-tight mb-3">
-                  {t("projects_p6_title")}
-                </h4>
-                
-                {/* Project Metadata Badges */}
-                <div className="flex flex-wrap gap-1.5 mb-4">
-                  <span className="text-[9px] font-mono font-bold tracking-wider uppercase px-2 py-0.5 bg-blue-500/15 border border-blue-500/30 text-blue-300 rounded-sm">
-                    {t("projects_p6_employer")}
-                  </span>
-                  <span className="text-[9px] font-mono font-bold tracking-wider uppercase px-2 py-0.5 bg-white/5 border border-white/10 text-slate-300 rounded-sm">
-                    {t("projects_p6_role")}
-                  </span>
-                </div>
-                
-
-
-                <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6 flex-grow font-sans">
-                  {t("projects_p6_desc")}
-                </p>
-                
-                {/* Impact box */}
-                <div className="mt-auto pt-4 border-t border-white/5 bg-blue-500/[0.02] p-3.5 rounded-sm border border-blue-500/5">
-                  <span className="text-[9px] font-mono tracking-wider text-blue-400 uppercase block mb-1">
-                    {t("projects_impact_label")}
-                  </span>
-                  <p className="text-slate-300 text-xs font-sans leading-relaxed">
-                    {t("projects_p6_impact")}
-                  </p>
                 </div>
               </div>
             </motion.div>

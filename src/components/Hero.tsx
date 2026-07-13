@@ -27,7 +27,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[90vh] flex items-center justify-center pt-28 pb-20 overflow-hidden bg-transparent"
+      className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center pt-24 pb-16 sm:pt-32 sm:pb-24 overflow-hidden bg-transparent"
     >
       {/* Decorative ambient glow */}
       <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />

@@ -74,13 +74,7 @@ export default function Header() {
               </div>
             </button>
 
-            {/* Professional Status badge */}
-            <div className="hidden lg:flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/5 rounded-sm">
-              <div className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse"></div>
-              <span className="font-mono text-[8px] uppercase tracking-wider text-blue-400">
-                {t("header_status")}
-              </span>
-            </div>
+            {/* Professional Status badge removed */}
           </div>
 
           {/* Desktop Navigation */}

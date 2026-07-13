@@ -53,7 +53,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-24 bg-transparent relative border-t border-white/5 overflow-hidden">
+    <section id="projects" className="py-16 sm:py-24 bg-transparent relative border-t border-white/5 overflow-hidden">
       {/* Decorative ambient glows */}
       <div className="absolute top-1/3 right-1/10 w-96 h-96 bg-blue-600/5 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-1/4 left-1/10 w-80 h-80 bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />

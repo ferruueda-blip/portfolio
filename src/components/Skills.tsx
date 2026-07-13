@@ -38,7 +38,7 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="py-24 bg-transparent relative border-t border-white/5">
+    <section id="skills" className="py-16 sm:py-24 bg-transparent relative border-t border-white/5">
       {/* Decorative background scanline/mesh pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.002)_1px,transparent_1px)] bg-[size:100%_4px] pointer-events-none opacity-40" />
 

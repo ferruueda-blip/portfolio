@@ -8,7 +8,7 @@ export default function Experience() {
   const { language, t } = useLanguage();
 
   return (
-    <section id="experience" className="py-24 bg-transparent relative border-t border-white/5">
+    <section id="experience" className="py-16 sm:py-24 bg-transparent relative border-t border-white/5">
       {/* Ambient decorative glow */}
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
 

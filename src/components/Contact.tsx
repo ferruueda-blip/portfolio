@@ -15,7 +15,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-transparent relative border-t border-white/5 overflow-hidden">
+    <section id="contact" className="py-16 sm:py-24 bg-transparent relative border-t border-white/5 overflow-hidden">
       {/* Immersive radial glow centering behind the main card */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-blue-500/5 rounded-full blur-[130px] pointer-events-none" />
 

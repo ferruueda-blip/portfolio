@@ -8,7 +8,7 @@ export default function Education() {
   const { language, t } = useLanguage();
 
   return (
-    <section id="education" className="py-24 bg-transparent relative border-t border-white/5">
+    <section id="education" className="py-16 sm:py-24 bg-transparent relative border-t border-white/5">
       {/* Subtle ambient light */}
       <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-64 h-64 bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
 

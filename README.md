@@ -2,8 +2,6 @@
 
 Portafolio profesional de una sola página: Product Owner & Technical PM, Operaciones y Procesos B2B.
 
-**Live:** https://fdrueda.com
-
 ## Stack
 
 - **React 19** + **TypeScript**

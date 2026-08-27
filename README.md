@@ -1,20 +1,57 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Fernando Rueda — Portafolio
 
-# Run and deploy your AI Studio app
+Portafolio profesional de una sola página: Product Owner & Technical PM, Operaciones y Procesos B2B.
 
-This contains everything you need to run your app locally.
+**Live:** https://fdrueda.com
 
-View your app in AI Studio: https://ai.studio/apps/48dffa80-954f-4def-9a1d-4307b0459a5d
+## Stack
 
-## Run Locally
+- **React 19** + **TypeScript**
+- **Vite 6** (build y dev server)
+- **Tailwind CSS 4** (`@tailwindcss/vite`)
+- **motion** para animaciones
+- **lucide-react** para iconografía
+- **jsPDF** para la generación del CV descargable (ES / EN)
 
-**Prerequisites:**  Node.js
+## Requisitos
 
+- Node.js 18+
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Desarrollo
+
+```bash
+npm install
+npm run dev      # http://localhost:3000
+```
+
+## Scripts
+
+| Script            | Descripción                          |
+| ----------------- | ------------------------------------ |
+| `npm run dev`     | Servidor de desarrollo con HMR       |
+| `npm run build`   | Build de producción en `dist/`       |
+| `npm run preview` | Sirve el build de producción         |
+| `npm run lint`    | Type-check con `tsc --noEmit`        |
+| `npm run og`      | Regenera `public/og-image.png`       |
+
+## Estructura
+
+```
+src/
+  components/         Secciones de la landing (Hero, Skills, Projects, …)
+  context/            LanguageContext — i18n ES/EN con persistencia
+  utils/              pdfGenerator (CV), scroll helpers
+  data.ts             Fuente única de contenido y tipos (experiencia, skills, educación)
+public/              robots.txt, sitemap.xml, og-image.png
+scripts/             generate-og.mjs (tarjeta social)
+```
+
+## Contenido
+
+Todo el contenido editable vive en `src/data.ts` y en las traducciones de
+`src/context/LanguageContext.tsx`. No hay backend: es un sitio estático.
+
+## Deploy
+
+Cualquier host estático (Vercel, Netlify, GitHub Pages, Cloudflare Pages).
+El comando de build es `npm run build` y el directorio de salida es `dist/`.

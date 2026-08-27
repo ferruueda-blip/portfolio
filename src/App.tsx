@@ -18,6 +18,14 @@ export default function App() {
   return (
     <LanguageProvider>
       <div className="min-h-screen bg-[#050505] text-slate-100 font-sans selection:bg-blue-500/30 selection:text-blue-200 relative overflow-x-hidden">
+        {/* Skip link for keyboard / screen-reader users */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-3 focus:left-3 focus:px-4 focus:py-2 focus:rounded-sm focus:bg-blue-600 focus:text-white focus:text-sm focus:font-mono"
+        >
+          Skip to content
+        </a>
+
         {/* Background Dot Matrix Pattern */}
         <div 
           className="absolute inset-0 pointer-events-none opacity-20 z-0" 

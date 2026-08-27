@@ -1,26 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { PERSONAL_INFO } from "../data";
-import { ArrowDown, Terminal, FileText, ChevronRight } from "lucide-react";
+import { Terminal, FileText, ChevronRight, Loader2 } from "lucide-react";
 import { motion } from "motion/react";
 import { useLanguage } from "../context/LanguageContext";
 import { downloadResumePdf } from "../utils/pdfGenerator";
+import { scrollToSection } from "../utils/scroll";
 
 export default function Hero() {
   const { language, t } = useLanguage();
+  const [isGeneratingPdf, setIsGeneratingPdf] = useState(false);
 
-  const handleScrollToProjects = () => {
-    const element = document.getElementById("projects");
-    if (element) {
-      const offset = 80;
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
+  const handleScrollToProjects = () => scrollToSection("projects");
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+  const handleDownloadCv = async () => {
+    if (isGeneratingPdf) return;
+    setIsGeneratingPdf(true);
+    try {
+      await downloadResumePdf(language);
+    } finally {
+      setIsGeneratingPdf(false);
     }
   };
 
@@ -98,12 +96,18 @@ export default function Hero() {
           id="hero-ctas"
         >
           <button
-            onClick={() => downloadResumePdf(language)}
-            className="w-full sm:w-auto px-8 py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs uppercase tracking-wider rounded-sm shadow-lg shadow-blue-500/10 hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer font-mono"
+            onClick={handleDownloadCv}
+            disabled={isGeneratingPdf}
+            aria-busy={isGeneratingPdf}
+            className="w-full sm:w-auto px-8 py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs uppercase tracking-wider rounded-sm shadow-lg shadow-blue-500/10 hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer font-mono disabled:opacity-70 disabled:cursor-wait"
             id="hero-cv-btn"
           >
-            <FileText className="w-4 h-4" />
-            {t("hero_cta_cv")}
+            {isGeneratingPdf ? (
+              <Loader2 className="w-4 h-4 animate-spin" />
+            ) : (
+              <FileText className="w-4 h-4" />
+            )}
+            {isGeneratingPdf ? t("hero_cta_cv_loading") : t("hero_cta_cv")}
           </button>
           
           <button

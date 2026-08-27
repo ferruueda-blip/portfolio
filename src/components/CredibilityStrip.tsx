@@ -42,7 +42,7 @@ export default function CredibilityStrip() {
               >
                 <div className="flex items-center gap-2 mb-2">
                   <Icon className="w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />
-                  <span className="font-mono text-[9px] text-slate-500 uppercase tracking-widest">
+                  <span className="font-mono text-[9px] text-slate-400 uppercase tracking-widest">
                     METRIC_0{idx + 1}
                   </span>
                 </div>

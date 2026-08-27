@@ -1,4 +1,4 @@
-import { jsPDF } from "jspdf";
+import type { jsPDF } from "jspdf";
 import { PERSONAL_INFO, SKILL_CATEGORIES, EXPERIENCE_TIMELINE, EDUCATION_HISTORY } from "../data";
 
 class PdfWriter {
@@ -110,7 +110,9 @@ const labels = {
   }
 };
 
-export function downloadResumePdf(lang: "es" | "en") {
+export async function downloadResumePdf(lang: "es" | "en") {
+  // Loaded on demand so jsPDF (~430 kB) stays out of the initial bundle.
+  const { jsPDF } = await import("jspdf");
   const doc = new jsPDF("p", "mm", "letter");
   
   doc.setDocumentProperties({

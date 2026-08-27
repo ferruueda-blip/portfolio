@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { PERSONAL_INFO } from "../data";
 import { Mail, Linkedin, Menu, X, Globe } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
+import { scrollToSection } from "../utils/scroll";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,21 +17,9 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
+  const goToSection = (id: string) => {
     setIsMobileMenuOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 80; // height of navbar
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
+    scrollToSection(id);
   };
 
   const LanguageSwitcher = () => (
@@ -60,7 +49,7 @@ export default function Header() {
           {/* Logo / Name / Operator Status */}
           <div className="flex-shrink-0 flex items-center gap-4">
             <button
-              onClick={() => scrollToSection("hero")}
+              onClick={() => goToSection("hero")}
               className="flex items-center space-x-2 text-left group"
               id="header-logo-btn"
             >
@@ -80,25 +69,25 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8" id="desktop-nav">
             <button
-              onClick={() => scrollToSection("skills")}
+              onClick={() => goToSection("skills")}
               className="text-xs font-mono uppercase tracking-wider text-slate-300 hover:text-blue-400 transition-colors cursor-pointer"
             >
               {t("nav_skills")}
             </button>
             <button
-              onClick={() => scrollToSection("projects")}
+              onClick={() => goToSection("projects")}
               className="text-xs font-mono uppercase tracking-wider text-slate-300 hover:text-blue-400 transition-colors cursor-pointer"
             >
               {t("nav_projects")}
             </button>
             <button
-              onClick={() => scrollToSection("experience")}
+              onClick={() => goToSection("experience")}
               className="text-xs font-mono uppercase tracking-wider text-slate-300 hover:text-blue-400 transition-colors cursor-pointer"
             >
               {t("nav_experience")}
             </button>
             <button
-              onClick={() => scrollToSection("contact")}
+              onClick={() => goToSection("contact")}
               className="text-xs font-mono uppercase tracking-wider text-slate-300 hover:text-blue-400 transition-colors cursor-pointer"
             >
               {t("nav_contact")}
@@ -157,25 +146,25 @@ export default function Header() {
         <div className="md:hidden bg-[#050505]/95 border-b border-white/10 backdrop-blur-lg animate-in fade-in slide-in-from-top-4 duration-200">
           <div className="px-4 pt-2 pb-6 space-y-3">
             <button
-              onClick={() => scrollToSection("skills")}
+              onClick={() => goToSection("skills")}
               className="block w-full text-left px-3 py-2.5 rounded-sm text-sm font-mono uppercase tracking-wider text-slate-300 hover:text-white hover:bg-white/5 transition-all"
             >
               {t("nav_skills")}
             </button>
             <button
-              onClick={() => scrollToSection("projects")}
+              onClick={() => goToSection("projects")}
               className="block w-full text-left px-3 py-2.5 rounded-sm text-sm font-mono uppercase tracking-wider text-slate-300 hover:text-white hover:bg-white/5 transition-all"
             >
               {t("nav_projects")}
             </button>
             <button
-              onClick={() => scrollToSection("experience")}
+              onClick={() => goToSection("experience")}
               className="block w-full text-left px-3 py-2.5 rounded-sm text-sm font-mono uppercase tracking-wider text-slate-300 hover:text-white hover:bg-white/5 transition-all"
             >
               {t("nav_experience")}
             </button>
             <button
-              onClick={() => scrollToSection("contact")}
+              onClick={() => goToSection("contact")}
               className="block w-full text-left px-3 py-2.5 rounded-sm text-sm font-mono uppercase tracking-wider text-slate-300 hover:text-white hover:bg-white/5 transition-all"
             >
               {t("nav_contact")}

@@ -36,6 +36,10 @@ export const PERSONAL_INFO = {
   location: "Quito, Ecuador",
   email: "fdrueda96@gmail.com",
   linkedin: "https://www.linkedin.com/in/fdrueda/",
+  // WhatsApp number in international format, digits only.
+  whatsapp: "593987368191",
+  calendarUrl: "https://calendar.app.google/2mkQaeJmJPWFZvpr6",
+  siteUrl: "https://fdrueda.com",
 };
 
 export const SKILL_CATEGORIES: SkillCategory[] = [

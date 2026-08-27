@@ -16,13 +16,13 @@ export default function Education() {
         
         {/* Section Heading */}
         <div className="text-center md:text-left mb-16 max-w-2xl">
-          <h2 className="text-xs font-mono font-bold uppercase tracking-widest text-blue-400 mb-3 flex items-center justify-center md:justify-start gap-2">
+          <p className="text-xs font-mono font-bold uppercase tracking-widest text-blue-400 mb-3 flex items-center justify-center md:justify-start gap-2">
             <span className="w-4 h-[1px] bg-blue-500/50 inline-block"></span>
             {t("edu_badge")}
-          </h2>
-          <h3 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
             {t("edu_title")}
-          </h3>
+          </h2>
         </div>
 
         {/* Education Blocks */}
@@ -54,9 +54,9 @@ export default function Education() {
                     <span className="text-[9px] font-mono tracking-widest text-blue-400 uppercase font-bold block mb-1">
                       // DEGREE_RECORD_0{idx + 1}
                     </span>
-                    <h4 className="text-lg font-display font-extrabold text-white tracking-tight leading-snug">
+                    <h3 className="text-lg font-display font-extrabold text-white tracking-tight leading-snug">
                       {item.degree[language]}
-                    </h4>
+                    </h3>
                     <p className="text-slate-400 text-xs sm:text-sm mt-2 font-mono uppercase tracking-wider">
                       {item.school[language]}
                     </p>

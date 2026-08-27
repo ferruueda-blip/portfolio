@@ -63,13 +63,13 @@ export default function Projects() {
         {/* Section Heading with Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div className="text-left max-w-2xl">
-            <h2 className="text-xs font-mono font-bold uppercase tracking-widest text-blue-400 mb-3 flex items-center gap-2">
+            <p className="text-xs font-mono font-bold uppercase tracking-widest text-blue-400 mb-3 flex items-center gap-2">
               <span className="w-4 h-[1px] bg-blue-500/50 inline-block"></span>
               {t("projects_badge")}
-            </h2>
-            <h3 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
               {t("projects_title")}
-            </h3>
+            </h2>
             <p className="mt-4 text-gray-400 text-sm sm:text-base leading-relaxed font-sans">
               {t("projects_desc")}
             </p>
@@ -87,6 +87,7 @@ export default function Projects() {
               }`}
               id="projects-btn-prev"
               title="Previous projects"
+              aria-label="Previous projects"
             >
               <ArrowLeft className="w-4 h-4" />
             </button>
@@ -100,6 +101,7 @@ export default function Projects() {
               }`}
               id="projects-btn-next"
               title="Next projects"
+              aria-label="Next projects"
             >
               <ArrowRight className="w-4 h-4" />
             </button>
@@ -112,6 +114,9 @@ export default function Projects() {
           className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-8 hide-scrollbar cursor-grab active:cursor-grabbing"
           style={{ scrollbarWidth: "none" }}
           id="projects-carousel"
+          role="region"
+          aria-label={t("projects_title")}
+          tabIndex={0}
         >
           
           {/* Card 1: Dirección de Producto SaaS (Dishio) */}
@@ -159,9 +164,9 @@ export default function Projects() {
 
                 {/* Content info */}
                 <div className="p-6 flex flex-col flex-grow">
-                  <h4 className="text-base sm:text-lg font-display font-bold text-white uppercase tracking-tight mb-3">
+                  <h3 className="text-base sm:text-lg font-display font-bold text-white uppercase tracking-tight mb-3">
                     {t("projects_p1_title")}
-                  </h4>
+                  </h3>
                   
                   {/* Project Metadata Badges */}
                   <div className="flex flex-wrap gap-1.5 mb-5">
@@ -218,7 +223,7 @@ export default function Projects() {
                   <div className="relative flex items-center justify-center gap-4 z-10 scale-95">
                     <div className="w-12 h-12 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center shadow-inner relative">
                       <Bot className="w-5 h-5 text-emerald-400 animate-pulse" />
-                      <span className="absolute -bottom-5 text-[8px] font-mono text-slate-500">AI CLIENT</span>
+                      <span className="absolute -bottom-5 text-[8px] font-mono text-slate-400">AI CLIENT</span>
                     </div>
                     <div className="relative w-8 h-[2px] bg-emerald-500/30 flex items-center justify-between">
                       <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-ping" />
@@ -226,14 +231,14 @@ export default function Projects() {
                     </div>
                     <div className="w-12 h-12 rounded-sm bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shadow-inner relative">
                       <Cpu className="w-5 h-5 text-emerald-300" />
-                      <span className="absolute -bottom-5 text-[8px] font-mono text-slate-500">ORCHESTRATOR</span>
+                      <span className="absolute -bottom-5 text-[8px] font-mono text-slate-400">ORCHESTRATOR</span>
                     </div>
                     <div className="relative w-8 h-[2px] bg-emerald-500/30">
                       <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-ping delay-300 absolute right-0" />
                     </div>
                     <div className="w-12 h-12 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center shadow-inner relative">
                       <Database className="w-5 h-5 text-emerald-400" />
-                      <span className="absolute -bottom-5 text-[8px] font-mono text-slate-500">LEGACY_API</span>
+                      <span className="absolute -bottom-5 text-[8px] font-mono text-slate-400">LEGACY_API</span>
                     </div>
                   </div>
                   <div className="absolute bottom-2 right-2 flex items-center gap-1 bg-white/5 px-2 py-0.5 rounded-sm border border-white/10">
@@ -243,9 +248,9 @@ export default function Projects() {
 
                 {/* Content info */}
                 <div className="p-6 flex flex-col flex-grow">
-                  <h4 className="text-base sm:text-lg font-display font-bold text-white uppercase tracking-tight mb-3">
+                  <h3 className="text-base sm:text-lg font-display font-bold text-white uppercase tracking-tight mb-3">
                     {t("projects_p2_title")}
-                  </h4>
+                  </h3>
                   
                   {/* Project Metadata Badges */}
                   <div className="flex flex-wrap gap-1.5 mb-5">
@@ -306,7 +311,7 @@ export default function Projects() {
                         <div className="w-1.5 h-1.5 rounded-full bg-purple-500/60" />
                         <div className="w-1.5 h-1.5 rounded-full bg-emerald-500/60" />
                       </div>
-                      <span className="text-[8px] font-mono text-slate-500">OPS PIPELINE</span>
+                      <span className="text-[8px] font-mono text-slate-400">OPS PIPELINE</span>
                     </div>
                     <div className="space-y-1.5">
                       <div className="h-2 bg-blue-500/20 rounded-sm relative overflow-hidden flex items-center">
@@ -326,9 +331,9 @@ export default function Projects() {
 
                 {/* Content info */}
                 <div className="p-6 flex flex-col flex-grow">
-                  <h4 className="text-base sm:text-lg font-display font-bold text-white uppercase tracking-tight mb-3">
+                  <h3 className="text-base sm:text-lg font-display font-bold text-white uppercase tracking-tight mb-3">
                     {t("projects_p3_title")}
-                  </h4>
+                  </h3>
                   
                   {/* Project Metadata Badges */}
                   <div className="flex flex-wrap gap-1.5 mb-5">

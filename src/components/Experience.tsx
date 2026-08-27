@@ -16,13 +16,13 @@ export default function Experience() {
         
         {/* Section Heading */}
         <div className="text-center md:text-left mb-16 max-w-2xl">
-          <h2 className="text-xs font-mono font-bold uppercase tracking-widest text-blue-400 mb-3 flex items-center justify-center md:justify-start gap-2">
+          <p className="text-xs font-mono font-bold uppercase tracking-widest text-blue-400 mb-3 flex items-center justify-center md:justify-start gap-2">
             <span className="w-4 h-[1px] bg-blue-500/50 inline-block"></span>
             {t("exp_badge")}
-          </h2>
-          <h3 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
             {t("exp_title")}
-          </h3>
+          </h2>
           <p className="mt-4 text-gray-400 text-sm sm:text-base leading-relaxed font-sans">
             {t("exp_desc")}
           </p>
@@ -62,9 +62,9 @@ export default function Experience() {
                       <span className="text-xs font-mono font-bold tracking-widest text-blue-400 uppercase">
                         {item.company}
                       </span>
-                      <h4 className="text-xl sm:text-2xl font-display font-extrabold text-white tracking-tight mt-0.5">
+                      <h3 className="text-xl sm:text-2xl font-display font-extrabold text-white tracking-tight mt-0.5">
                         {item.role[language]}
-                      </h4>
+                      </h3>
                     </div>
 
                     {/* Period Badge */}
@@ -105,7 +105,7 @@ export default function Experience() {
                   {/* Key Achievements Bullet points */}
                   {item.achievements && item.achievements[language] && item.achievements[language].length > 0 && (
                     <div className="mb-6">
-                      <span className="text-[10px] font-mono tracking-widest text-slate-500 uppercase block mb-3">
+                      <span className="text-[10px] font-mono tracking-widest text-slate-400 uppercase block mb-3">
                         {t("exp_impact")}
                       </span>
                       <ul className="space-y-3.5">

@@ -3,16 +3,10 @@ import { PERSONAL_INFO } from "../data";
 import { Mail, Linkedin, ExternalLink, ArrowUp, MessageCircle, Calendar } from "lucide-react";
 import { motion } from "motion/react";
 import { useLanguage } from "../context/LanguageContext";
+import { scrollToTop } from "../utils/scroll";
 
 export default function Contact() {
   const { t } = useLanguage();
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <section id="contact" className="py-16 sm:py-24 bg-transparent relative border-t border-white/5 overflow-hidden">
@@ -43,12 +37,12 @@ export default function Contact() {
             {/* HUD Cyber Line Accent */}
             <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
 
-            <h2 className="text-xs font-mono font-extrabold uppercase tracking-widest text-blue-400 mb-3">
+            <p className="text-xs font-mono font-extrabold uppercase tracking-widest text-blue-400 mb-3">
               // {t("contact_badge")}
-            </h2>
-            <h3 className="text-2xl sm:text-4xl font-display font-extrabold text-white tracking-tight mb-4 uppercase">
+            </p>
+            <h2 className="text-2xl sm:text-4xl font-display font-extrabold text-white tracking-tight mb-4 uppercase">
               {t("contact_title")}
-            </h3>
+            </h2>
             <p className="text-gray-300 text-sm sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed font-sans">
               {t("contact_desc")}
             </p>
@@ -58,7 +52,7 @@ export default function Contact() {
               
               {/* Google Calendar Link (Primary Blue Cyber Button) */}
               <a
-                href="https://calendar.app.google/2mkQaeJmJPWFZvpr6"
+                href={PERSONAL_INFO.calendarUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="group/btn w-full flex items-center justify-center gap-2.5 px-5 py-4 bg-blue-600 hover:bg-blue-500 text-white font-mono text-xs font-extrabold uppercase tracking-widest transition-all duration-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.35)] hover:-translate-y-0.5 cursor-pointer"
@@ -86,7 +80,7 @@ export default function Contact() {
 
               {/* WhatsApp Link (Subtle Green Border Cyber Button) */}
               <a
-                href="https://wa.me/593987368191"
+                href={`https://wa.me/${PERSONAL_INFO.whatsapp}`}
                 target="_blank"
                 rel="noreferrer"
                 className="group/btn w-full flex items-center justify-center gap-2.5 px-5 py-4 border border-white/10 hover:border-emerald-500/35 text-slate-200 hover:text-emerald-400 font-mono text-xs font-extrabold uppercase tracking-widest bg-white/5 hover:bg-emerald-500/10 transition-all duration-300 hover:-translate-y-0.5 cursor-pointer"
@@ -112,25 +106,25 @@ export default function Contact() {
               >
                 <Linkedin className="w-4 h-4" />
                 <span>LinkedIn / FD_RUEDA</span>
-                <ExternalLink className="w-3.5 h-3.5 text-slate-600" />
+                <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
               </a>
             </div>
           </div>
         </motion.div>
 
         {/* Real Footer with System Indicators */}
-        <div className="mt-20 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-gray-500 text-xs gap-4">
+        <div className="mt-20 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-gray-400 text-xs gap-4">
           <div className="space-y-1.5 text-center sm:text-left">
-            <p className="text-[10px] font-mono uppercase tracking-widest text-slate-600">// {t("footer_end_transmission")}</p>
+            <p className="text-[10px] font-mono uppercase tracking-widest text-slate-400">// {t("footer_end_transmission")}</p>
             <p className="font-mono text-[10px]">© {new Date().getFullYear()} Fernando Rueda. {t("footer_rights")}</p>
           </div>
           <div className="flex items-center space-x-6">
-            <span className="font-mono text-[9px] text-blue-500/50 uppercase tracking-widest">
+            <span className="font-mono text-[9px] text-blue-400/80 uppercase tracking-widest">
               [ {t("footer_status")} ]
             </span>
             <button
               onClick={scrollToTop}
-              className="p-2.5 text-slate-500 hover:text-white rounded-none hover:bg-white/5 border border-transparent hover:border-white/10 transition-all cursor-pointer"
+              className="p-2.5 text-slate-400 hover:text-white rounded-none hover:bg-white/5 border border-transparent hover:border-white/10 transition-all cursor-pointer"
               title={t("footer_to_top")}
               aria-label="Scroll to top"
             >

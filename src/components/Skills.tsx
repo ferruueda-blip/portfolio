@@ -46,13 +46,13 @@ export default function Skills() {
         
         {/* Section Heading */}
         <div className="text-center md:text-left mb-16 max-w-2xl">
-          <h2 className="text-xs font-mono font-bold uppercase tracking-widest text-blue-400 mb-3 flex items-center justify-center md:justify-start gap-2">
+          <p className="text-xs font-mono font-bold uppercase tracking-widest text-blue-400 mb-3 flex items-center justify-center md:justify-start gap-2">
             <span className="w-4 h-[1px] bg-blue-500/50 inline-block"></span>
             {t("skills_badge")}
-          </h2>
-          <h3 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
             {t("skills_title")}
-          </h3>
+          </h2>
           <p className="mt-4 text-gray-400 text-sm sm:text-base leading-relaxed font-sans">
             {t("skills_desc")}
           </p>
@@ -83,9 +83,9 @@ export default function Skills() {
                     <div className="p-2.5 bg-white/5 border border-white/10 text-blue-400">
                       {theme.icon}
                     </div>
-                    <h4 className="font-display font-extrabold text-base text-slate-100 group-hover:text-white transition-colors uppercase tracking-tight">
+                    <h3 className="font-display font-extrabold text-base text-slate-100 group-hover:text-white transition-colors uppercase tracking-tight">
                       {category.title[language]}
-                    </h4>
+                    </h3>
                   </div>
 
                   {/* Description */}
@@ -95,7 +95,7 @@ export default function Skills() {
 
                   {/* Core Stack Tools */}
                   <div className="border-t border-white/5 pt-5 mt-auto">
-                    <span className="text-[9px] font-mono tracking-widest text-slate-500 uppercase block mb-3">
+                    <span className="text-[9px] font-mono tracking-widest text-slate-400 uppercase block mb-3">
                       {t("skills_subheader")}
                     </span>
                     <div className="flex flex-wrap gap-1.5">
@@ -140,9 +140,9 @@ export default function Skills() {
                 <span className="text-[10px] font-mono font-bold text-blue-400 uppercase tracking-widest bg-blue-500/10 border border-blue-500/20 px-2.5 py-1">
                   {t("skills_footer_badge")}
                 </span>
-                <h4 className="text-xl sm:text-2xl font-display font-extrabold text-white tracking-tight mt-3">
+                <h3 className="text-xl sm:text-2xl font-display font-extrabold text-white tracking-tight mt-3">
                   {t("skills_box_title")}
-                </h4>
+                </h3>
               </div>
               <p className="text-gray-400 text-sm sm:text-base font-medium max-w-sm sm:text-right font-sans">
                 {t("skills_box_desc")}

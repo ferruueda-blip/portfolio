@@ -36,6 +36,7 @@ const TRANSLATIONS = {
     hero_subtitle_text: "Product Owner & Technical PM | Operaciones & Procesos",
     hero_bio: "Conecto la estrategia de negocio con la ejecución técnica mediante metodologías ágiles y automatización para asegurar que la operación responda directamente a los objetivos del negocio.",
     hero_cta_cv: "Descargar CV (PDF)",
+    hero_cta_cv_loading: "Generando CV…",
     hero_cta_projects: "Ver Proyectos",
     
     // Credibility Strip
@@ -147,6 +148,7 @@ const TRANSLATIONS = {
     hero_subtitle_text: "Product Owner & Technical PM | Operations & Processes",
     hero_bio: "I connect business strategy with technical execution through agile methodologies and automation to ensure that operations respond directly to business objectives.",
     hero_cta_cv: "Download CV (PDF)",
+    hero_cta_cv_loading: "Generating CV…",
     hero_cta_projects: "View Projects",
     
     // Credibility Strip
@@ -236,11 +238,29 @@ const TRANSLATIONS = {
   }
 };
 
+const STORAGE_KEY = "portfolio-lang";
+
+function getInitialLanguage(): Language {
+  if (typeof window === "undefined") return "es";
+  try {
+    const stored = window.localStorage.getItem(STORAGE_KEY);
+    if (stored === "es" || stored === "en") return stored;
+  } catch {
+    // localStorage unavailable (private mode, blocked cookies) — fall through.
+  }
+  return navigator.language?.toLowerCase().startsWith("en") ? "en" : "es";
+}
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>("es");
+  const [language, setLanguage] = useState<Language>(getInitialLanguage);
 
   useEffect(() => {
     document.documentElement.lang = language;
+    try {
+      window.localStorage.setItem(STORAGE_KEY, language);
+    } catch {
+      // Ignore persistence failures.
+    }
   }, [language]);
 
   const toggleLanguage = () => {

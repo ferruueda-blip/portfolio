@@ -151,8 +151,8 @@ export const EXPERIENCE_TIMELINE: ExperienceItem[] = [
       en: "Project Manager & Process Analyst",
     },
     period: {
-      es: "Septiembre 2021 - Diciembre 2023",
-      en: "September 2021 - December 2023",
+      es: "Noviembre 2020 - Diciembre 2023",
+      en: "November 2020 - December 2023",
     },
     description: {
       es: "Gestioné plataformas SaaS multi-cliente, lideré la traducción funcional entre negocio y tecnología, y coordiné el delivery técnico del equipo de desarrollo.",
@@ -175,37 +175,6 @@ export const EXPERIENCE_TIMELINE: ExperienceItem[] = [
       en: "Successful launch of the B2B SaaS platform MVP in a record time of 6 months using agile methodologies and technical variance controls."
     },
     tags: ["SaaS", "BPMN", "Project Management", "Jira", "Process Mapping"],
-  },
-  {
-    id: "fametex",
-    company: "Fametex",
-    role: {
-      es: "Coordinador de Procesos",
-      en: "Process Coordinator",
-    },
-    period: {
-      es: "Noviembre 2020 - Septiembre 2021",
-      en: "November 2020 - September 2021",
-    },
-    description: {
-      es: "Lideré iniciativas de mejora continua, estandarización de procesos bajo la filosofía Lean y la digitalización de operativas físicas tradicionales.",
-      en: "Led continuous improvement initiatives, process standardization under Lean philosophy, and digitalization of traditional physical operations.",
-    },
-    achievements: {
-      es: [
-        "Alineé la capacidad de producción con la demanda comercial, soportando ventas sostenidas de ~$30,000 mensuales.",
-        "Identifiqué cuellos de botella digitalizando procedimientos operativos bajo la filosofía Lean.",
-      ],
-      en: [
-        "Aligned production capacity with commercial demand, supporting sustained monthly sales of ~$30,000.",
-        "Identified and resolved operational bottlenecks by digitalizing procedural workflows under a Lean philosophy.",
-      ],
-    },
-    keyImpact: {
-      es: "Estandarización y digitalización de flujos bajo metodología Lean, garantizando la continuidad operativa y soportando ventas mensuales estables de ~$30,000.",
-      en: "Process standardization and flow digitalization under Lean methodology, guaranteeing operational continuity and supporting stable monthly sales of ~$30,000."
-    },
-    tags: ["Lean", "Continuous Improvement", "Standardization", "Operations"],
   },
 ];
 
